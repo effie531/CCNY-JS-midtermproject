@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Calculate my Rewards</title> 
+  
+    <style> 
+        html { 
+    font-family: sans-serif; 
+    } 
+      
+        body { 
+    width: 50%; 
+    max-width: 800px; 
+    min-width: 480px; 
+    margin: 0 auto; 
+    } 
+    </style> 
+</head> 
+  
+<body> 
+<h1>Calculate my rewards</h1> 
+  
+<p> Enter the total amount spent already and the amount plan to spend to see your reward amount <br> 
+    Rules:<br>
+           Amount $100 or more --> Reward:  $5  coupon <br>
+           Amount $200 or more --> Reward: $15 coupon <br>
+           Amount $300 or more --> Reward: $25 coupon <br>
+           Amount $500 or more --> Reward: $50 coupon </p> 
+  
+<div class="form"> 
+    <label for="Amountspent">Enter Total Amount Spent: </label> 
+    <input type = "text" id = "Amountspent" class = "Amountspent"> 
+    <input type = "submit" value = "Calculate Reward" 
+           class = "CalculateReward" id = "CalculateReward"> 
+</div> 
+  
+<script type = "text/javascript"> 
+  
+      var maxlimit= 500; 
+      
+    document.getElementById("CalculateReward").onclick = function(){ 
+      
+    
+   var x = document.getElementById("Amountspent").value; 
+  
+   if(x >= maxlimit) 
+   {     
+       alert("CONGRATULATIONS!!! Your Rewards are worth $50"); 
+   } 
+   else if(x > 300)  
+   {     
+        alert("CONGRATULATIONS!!! Your Rewards are worth $25"); 
+   } 
+   else if(x > 200)  
+   {     
+        alert("CONGRATULATIONS!!! Your Rewards are worth $15"); 
+   } 
+ 	else if(x > 100)  
+   {     
+        alert("CONGRATULATIONS!!! Your Rewards are worth $5"); 
+   } 
+ 
+   else
+   { 
+      
+       alert("OOPS SORRY!! You have no Rewards - you need to spend at least $100 to receive rewards") 
+   } 
+} 
+</script> 
+</body> 
+</html>                    
